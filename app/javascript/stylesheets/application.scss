@@ -10,3 +10,7 @@
 .red-card p {
   @apply text-white text-2xl;
 }
+
+.btn {
+  @apply px-3 py-2 bg-black border rounded text-white;
+}
