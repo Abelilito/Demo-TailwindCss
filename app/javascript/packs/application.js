@@ -9,6 +9,7 @@ require("@rails/activestorage").start()
 require("channels")
 
 require("stylesheets/application.scss")
+require("components/button.scss")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
