@@ -1,19 +1,121 @@
-<h1 class="abel">Static#index</h1>
+<div class="bg-white">
+  <div class="container py-8 flex">
+    <div class="logo">
+      <%= image_tag ('LOGO_long.png') %>
+    </div>
 
-<div class="red-card">
-  <p>Test-Tailwind</p>
+    <div class="navbar-links gt-Meduim p-4 uppercase ml-8">
+      <ul class="flex">
+        <li>Toutes les offres</li>
+        <li class="mx-4">|</li>
+        <li>Investir durable ?</li>
+        <li class="mx-4">|</li>
+        <li>
+        <i class="fas fa-circle animate-ping"></i>
+        <i class="fas fa-gift"></i></li>
+      </ul>
+    </div>
+
+    <div class="navbar-cta pt-3 ml-3">
+      <a class="btn btn-white-green">Prendre RDV <i class="fas fa-phone ml-2.5"></i></a>
+      <a class="btn btn-purple text-white">S'inscrire</a>
+      <a class="btn btn-white-gray">Connexion</a>
+    </div>
+
+    <div class="country-language pt-3 ml-4">
+      <div class="language">
+        <select>
+            <option value="FR">FR</option>
+            <option value="EN">EN</option>
+            <option value="NL">NL</option>
+        </select>
+      </div>
+    </div>
+
+  </div>
 </div>
 
-<button class="btn">PUSH</button>
+<!--
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+!-->
 
 
-<form>
-  <input type="checkbox" id="myCheck" onmouseover="myFunction()" onclick="alert('click event occured')">
-</form>
-
+<a class="btn btn-green">PUSH <i class="fab fa-twitter fa-2x"></i> </a>
 
 <script>
+
+$('select').each(function(){
+    var $this = $(this), numberOfOptions = $(this).children('option').length;
+
+    $this.addClass('select-hidden');
+    $this.wrap('<div class="select"></div>');
+    $this.after('<div class="select-styled"></div>');
+
+    var $styledSelect = $this.next('div.select-styled');
+    $styledSelect.text($this.children('option').eq(0).text());
+
+    var $list = $('<ul />', {
+        'class': 'select-options'
+    }).insertAfter($styledSelect);
+
+    for (var i = 0; i < numberOfOptions; i++) {
+        $('<li />', {
+            text: $this.children('option').eq(i).text(),
+            rel: $this.children('option').eq(i).val()
+        }).appendTo($list);
+    }
+
+    var $listItems = $list.children('li');
+
+    $styledSelect.click(function(e) {
+        e.stopPropagation();
+        $('div.select-styled.active').not(this).each(function(){
+            $(this).removeClass('active').next('ul.select-options').hide();
+        });
+        $(this).toggleClass('active').next('ul.select-options').toggle();
+    });
+
+    $listItems.click(function(e) {
+        e.stopPropagation();
+        $styledSelect.text($(this).text()).removeClass('active');
+        $this.val($(this).attr('rel'));
+        $list.hide();
+        //console.log($this.val());
+    });
+
+    $(document).click(function() {
+        $styledSelect.removeClass('active');
+        $list.hide();
+    });
+
+});
+</script>
+
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
 function myFunction() {
-  document.getElementById("myCheck").click();
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
 }
 </script>
