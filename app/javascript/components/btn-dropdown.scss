@@ -1,0 +1,142 @@
+div.mm-dropdown {
+  width: 100%;
+  border-radius: 3px;
+}
+
+div.mm-dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.textfirst {
+  width: 63%;
+    &:after {
+    content: "\f078";
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "FontAwesome";
+    margin-left: 26px;
+    position: relative;
+    top: -21px;
+  }
+}
+
+div.mm-dropdown ul li,
+div.mm-dropdown div.textfirst {
+  padding: 0;
+  color: #333;
+  padding: 5px 15px;
+}
+
+div.mm-dropdown div.textfirst img.down {
+  float: right;
+  margin-top: 5px
+}
+
+div.mm-dropdown ul li:last-child {
+  border-bottom: 0;
+}
+
+div.mm-dropdown ul li {
+  display: none;
+  padding-left: 25px;
+}
+
+div.mm-dropdown ul li.main {
+  display: block;
+}
+
+div.mm-dropdown ul li img {
+  width: 20px;
+  height: 20px;
+}
+
+
+.dropbtn {
+
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  overflow: auto;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+
+/*--- SELECT ---*/
+.select-hidden {
+  display: none;
+  visibility: hidden;
+  padding-right: 10px;
+}
+.select {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  font-size: 14px;
+  font-family: 'Gotham Medium';
+}
+
+.select-styled {
+  &:after {
+    content: "\f078";
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "FontAwesome";
+    margin-left: 8px;
+  }
+}
+
+.select-options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: white;
+  -webkit-box-shadow: -1px 2px 48px 12px rgba(0,0,0,0.2);
+  -moz-box-shadow: -1px 2px 48px 12px rgba(0,0,0,0.2);
+  box-shadow: -1px 2px 48px 12px rgba(0,0,0,0.2);
+  padding: 5rem;
+  width: 7rem;
+  padding-left: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: .75rem;
+}
