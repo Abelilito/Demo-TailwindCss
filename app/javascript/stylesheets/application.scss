@@ -3,11 +3,5 @@
 @import "tailwindcss/utilities";
 
 @import "components/button";
-
-.red-card {
-  @apply bg-red-500 my-4 w-3/4 mx-auto p-4;
-}
-
-.red-card p {
-  @apply text-white text-2xl;
-}
+@import "components/btn-dropdown";
+@import "components/tailwind-global";
