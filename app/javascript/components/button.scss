@@ -26,9 +26,9 @@
   }
 }
 
-.btn-white-gray {
-  @apply bg-white border-solid border-2 border-gray-400 text-gray-400 ;
+.btn-white-grey {
+  @apply bg-white border-solid border-2 border-grey text-grey ;
   &:hover {
-    @apply bg-gray-400 text-white ;
+    @apply bg-grey text-white ;
   }
 }
