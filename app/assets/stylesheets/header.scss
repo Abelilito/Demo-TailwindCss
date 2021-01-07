@@ -1,3 +1,67 @@
 .logo img {
   width: 237px;
 }
+
+ul.social-icons li {
+  display: inline-block;
+  margin-bottom: 0;
+  margin-right: 20px;
+}
+
+ul.social-icons li {
+  &:nth-child(1) a {
+    background-image: asset-url("icon-social_01.png");
+    width: 32px;
+    height: 32px;
+    background-size: 32px 65px;
+    background-repeat: no-repeat;
+    display: block;
+  }
+
+  &:nth-child(2) a {
+    background-image: asset-url("icon-social_03.png");
+    width: 32px;
+    height: 32px;
+    background-size: 32px 65px;
+    background-repeat: no-repeat;
+    display: block;
+  }
+
+  &:nth-child(3) a {
+    background-image: asset-url("icon-social_05.png");
+    width: 32px;
+    height: 32px;
+    background-size: 32px 65px;
+    background-repeat: no-repeat;
+    display: block;
+  }
+
+  &:nth-child(4) a {
+    background-image: asset-url("icon-social_07.png");
+    width: 32px;
+    height: 32px;
+    background-size: 32px 65px;
+    background-repeat: no-repeat;
+    display: block;
+  }
+
+  &:nth-child(5) a {
+    background-image: asset-url("icon-social_09.png");
+    width: 33px;
+    height: 33px;
+    background-size: 33px 66px;
+    background-repeat: no-repeat;
+    display: block;
+  }
+
+  &:nth-child(1) a:hover,
+  &:nth-child(2) a:hover,
+  &:nth-child(3) a:hover,
+  &:nth-child(4) a:hover {
+    background-position-y: -33px;
+  }
+
+  &:nth-child(5) a:hover {
+    background-position-y: -34px;
+  }
+}
