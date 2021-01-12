@@ -1,10 +1,10 @@
 <header class="bg-white sticky top-0 border-b border-1 border-gray-light">
-  <div class="sm-container md:mx-28 py-8 flex">
+  <div class="sm-container xl:mx-28 2xl:mx-72 py-8 flex">
     <div class="logo">
       <%= image_tag ('LOGO_long.png') %>
     </div>
 
-    <div class="md:hidden ft-size-30 ml-20">
+    <div class="ft-size-30 d-none-desktop absolute right-4">
       <button onclick="on()" onclick="off()" id="abel"><i class="fas fa-bars"></i></button>
       <button onclick="off()" id="toto" class="d-none"><i class="fas fa-times"></i></button>
     </div>
@@ -39,7 +39,7 @@
       </div>
     </div>
 
-    <div class="navbar-links gt-Meduim p-4 uppercase ml-8 d-none-sm">
+    <div class="navbar-links gt-Meduim p-4 uppercase ml-8 d-none-sm d-none-tablet-pro">
       <ul class="flex">
         <li>Toutes les offres</li>
         <li class="mx-2">|</li>
@@ -51,13 +51,13 @@
       </ul>
     </div>
 
-    <div class="pt-3 ml-3 d-none-sm">
+    <div class="pt-3 ml-3 d-none-sm d-none-tablet-pro">
       <a class="btn btn-white-green">Prendre RDV <i class="fas fa-phone ml-2.5"></i></a>
       <a class="btn btn-purple text-white">S'inscrire</a>
       <a class="btn btn-white-gray">Connexion</a>
     </div>
 
-    <div class="country-language pt-3 ml-4 d-none-sm">
+    <div class="country-language pt-3 ml-4 d-none-sm d-none-tablet-pro">
       <div class="language">
         <select>
             <option value="FR">FR</option>
@@ -67,7 +67,7 @@
       </div>
     </div>
 
-    <div class="country-language pt-3 ml-4 d-none-sm">
+    <div class="country-language pt-3 ml-4 d-none-sm d-none-tablet-pro">
       <div class="mm-dropdown">
         <div class="textfirst"><%= image_tag ('flag_be.jpg') %></div>
         <ul>

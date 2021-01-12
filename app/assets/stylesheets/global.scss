@@ -44,6 +44,18 @@ h1 {
   }
 }
 
+.d-none-desktop {
+  @media (min-width: 1281px) {
+    display: none;
+  }
+}
+
+.d-none-tablet-pro {
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    display: none;
+  }
+}
+
 #overlay {
   position: fixed;
   display: none;
