@@ -15,9 +15,56 @@
   font-size: 8px;
 }
 
-footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+.menu-mobile {
+  height: 100vh;
+  margin-top: 1px;
+  width: 65%;
+  float: right;
+}
+
+.board-row-fluid {
+  background-image: asset-url("homepage.jpg");
+  height: 35rem;
+  @media (max-width: 640px) {
+    height: 13rem;
+  }
+}
+
+.panel-post {
+  margin-right: 38rem;
+  margin-left: 8rem;
+  @media (max-width: 768px) {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+  @media (min-width: 320px) and (max-width: 480px) {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+.ul-li-inside {
+  list-style: inside;
+}
+
+.abel {
+  @media (max-width: 640px) {
+    width: 100%;
+  }
+}
+
+.toto {
+  @media (max-width: 640px) {
+    right: 0;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    right: 16rem;
+  }
+  @media (max-width: 736px) and (min-width: 414px) {
+    right: 15rem;
+  }
 }

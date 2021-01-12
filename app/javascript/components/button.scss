@@ -26,10 +26,10 @@
   }
 }
 
-.btn-white-grey {
-  @apply bg-white border-solid border-2 border-grey text-grey ;
+.btn-white-gray {
+  @apply bg-white border-solid border-2 border-gray text-gray ;
   &:hover {
-    @apply bg-grey text-white ;
+    @apply bg-gray text-white ;
   }
 }
 
@@ -38,4 +38,8 @@
   &:hover {
     @apply bg-green-400 border-white text-white;
   }
+}
+
+.panel-post {
+  @apply bg-white p-10 ;
 }

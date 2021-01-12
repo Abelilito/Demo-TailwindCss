@@ -1,10 +1,45 @@
-<div class="bg-white">
-  <div class="mg-container py-8 flex">
+<header class="bg-white sticky top-0 border-b border-1 border-gray-light">
+  <div class="sm-container xl:mx-28 2xl:mx-72 py-8 flex">
     <div class="logo">
       <%= image_tag ('LOGO_long.png') %>
     </div>
 
-    <div class="navbar-links gt-Meduim p-4 uppercase ml-8">
+    <div class="ft-size-30 d-none-desktop absolute right-4">
+      <button onclick="on()" onclick="off()" id="abel"><i class="fas fa-bars"></i></button>
+      <button onclick="off()" id="toto" class="d-none"><i class="fas fa-times"></i></button>
+    </div>
+    <div id="overlay">
+      <div class="bg-white menu-mobile p-4 navbar-links">
+        <ul class="gt-Meduim">
+          <li class="border-b border-1 border-gray-light pb-4">
+            <i class="fas fa-folder-open"></i> Toutes les offres
+          </li>
+          <li class="border-b border-1 border-gray-light pb-4 pt-4">
+            <i class="fas fa-globe-americas"></i> Investir durable ?
+          </li>
+          <li class="border-b border-1 border-gray-light pb-4 pt-4">
+            <i class="fas fa-gift icon-gift"></i> Parrainage
+          </li>
+          <li class="border-b border-1 border-gray-light pb-4 pt-4">
+            <i class="fas fa-phone"></i> Prendre rendez-vous
+          </li>
+          <li class="pt-8 mb-8">
+            <a class="btn btn-purple text-white">S'inscrire</a>
+          </li>
+          <li class="pb-8 border-b border-1 border-gray-light">
+            <a class="btn btn-white-gray">Connexion</a>
+          </li>
+          <li>
+            <ul class="flex justify-center pt-4">
+              <li><%= image_tag ('flag_be.jpg'), class: "w-3/6" %></li>
+              <li><%= image_tag ('flag_fr.jpg'), class: "w-3/6" %></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="navbar-links gt-Meduim p-4 uppercase ml-8 d-none-sm d-none-tablet-pro">
       <ul class="flex">
         <li>Toutes les offres</li>
         <li class="mx-2">|</li>
@@ -16,13 +51,13 @@
       </ul>
     </div>
 
-    <div class="navbar-cta pt-3 ml-3">
+    <div class="pt-3 ml-3 d-none-sm d-none-tablet-pro">
       <a class="btn btn-white-green">Prendre RDV <i class="fas fa-phone ml-2.5"></i></a>
       <a class="btn btn-purple text-white">S'inscrire</a>
-      <a class="btn btn-white-grey">Connexion</a>
+      <a class="btn btn-white-gray">Connexion</a>
     </div>
 
-    <div class="country-language pt-3 ml-4">
+    <div class="country-language pt-3 ml-4 d-none-sm d-none-tablet-pro">
       <div class="language">
         <select>
             <option value="FR">FR</option>
@@ -32,7 +67,7 @@
       </div>
     </div>
 
-    <div class="country-language pt-3 ml-4">
+    <div class="country-language pt-3 ml-4 d-none-sm d-none-tablet-pro">
       <div class="mm-dropdown">
         <div class="textfirst"><%= image_tag ('flag_be.jpg') %></div>
         <ul>
@@ -46,8 +81,10 @@
         <input type="hidden" class="option" name="namesubmit" value="" />
       </div>
     </div>
+
   </div>
-</div>
+</header>
+
 
 
 
@@ -103,27 +140,50 @@
   });
 
 
- $(function() {
+  $(function() {
   // Set
-  var main = $('div.mm-dropdown .textfirst')
-  var li = $('div.mm-dropdown > ul > li.input-option')
-  var inputoption = $("div.mm-dropdown .option")
-  var default_text = '<%= image_tag ('flag_be.jpg') %>';
+    var main = $('div.mm-dropdown .textfirst')
+    var li = $('div.mm-dropdown > ul > li.input-option')
+    var inputoption = $("div.mm-dropdown .option")
+    var default_text = '<%= image_tag ('flag_be.jpg') %>';
 
-  // Animation
-  main.click(function() {
-    main.html(default_text);
-    li.toggle('fast');
+    // Animation
+    main.click(function() {
+      main.html(default_text);
+      li.toggle('fast');
+    });
+
+    // Insert Data
+    li.click(function() {
+      // hide
+      li.toggle('fast');
+      var livalue = $(this).data('value');
+      var lihtml = $(this).html();
+      main.html(lihtml);
+      inputoption.val(livalue);
+    });
   });
 
-  // Insert Data
-  li.click(function() {
-    // hide
-    li.toggle('fast');
-    var livalue = $(this).data('value');
-    var lihtml = $(this).html();
-    main.html(lihtml);
-    inputoption.val(livalue);
-  });
-});
+  function myFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+
+  function on() {
+    document.getElementById("overlay").style.display = "block";
+    document.getElementById("abel").style.display = "none";
+    document.getElementById("toto").style.display = "block";
+    document.getElementById("bobyjd").style.overflow = "hidden";
+  }
+
+  function off() {
+    document.getElementById("overlay").style.display = "none";
+    document.getElementById("toto").style.display = "none"
+    document.getElementById("abel").style.display = "block"
+    document.getElementById("bobyjd").style.overflow = "auto";
+  }
 </script>
