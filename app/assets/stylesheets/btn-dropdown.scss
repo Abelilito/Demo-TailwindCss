@@ -12,7 +12,7 @@ div.mm-dropdown ul {
 
 .textfirst {
   width: 63%;
-    &:after {
+  &:after {
     content: "\f078";
     display: inline-block;
     font-style: normal;
@@ -58,14 +58,11 @@ div.mm-dropdown ul li img {
 
 
 .dropbtn {
-
   padding: 16px;
   font-size: 16px;
   border: none;
   cursor: pointer;
 }
-
-
 
 .dropdown {
   position: relative;
@@ -87,9 +84,13 @@ div.mm-dropdown ul li img {
   display: block;
 }
 
-.dropdown a:hover {background-color: #ddd;}
+.dropdown a:hover {
+  background-color: #ddd;
+}
 
-.show {display: block;}
+.show {
+  display: block;
+}
 
 
 /*--- SELECT ---*/
@@ -98,6 +99,7 @@ div.mm-dropdown ul li img {
   visibility: hidden;
   padding-right: 10px;
 }
+
 .select {
   cursor: pointer;
   display: inline-block;
