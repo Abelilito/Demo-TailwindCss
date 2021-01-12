@@ -1,0 +1,9 @@
+.panel-post {
+  @apply bg-white p-10 ;
+}
+
+@screen md {
+  .panel-post {
+    @apply -mt-72 rounded-xl;
+  }
+}

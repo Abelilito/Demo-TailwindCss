@@ -2,10 +2,22 @@
   @apply mx-28;
 }
 
-.sm-container {
+.fluid-container {
+  @apply mx-0;
+}
+
+.header-footer-container {
   @apply mx-4 ;
 }
 
-.fluid-container {
-  @apply mx-0;
+@screen xl {
+  .header-footer-container {
+    @apply mx-28 ;
+  }
+}
+
+@screen 2xl {
+  .header-footer-container {
+    @apply mx-72 ;
+  }
 }

@@ -1,5 +1,5 @@
 <header class="bg-white sticky top-0 border-b border-1 border-gray-light">
-  <div class="sm-container xl:mx-28 2xl:mx-72 py-8 flex">
+  <div class="header-footer-container py-8 flex">
     <div class="logo">
       <%= image_tag ('LOGO_long.png') %>
     </div>
@@ -84,12 +84,6 @@
 
   </div>
 </header>
-
-
-
-
-
-
 
 
 <script>
@@ -177,13 +171,13 @@
     document.getElementById("overlay").style.display = "block";
     document.getElementById("abel").style.display = "none";
     document.getElementById("toto").style.display = "block";
-    document.getElementById("bobyjd").style.overflow = "hidden";
+    document.getElementById("body-overflow").style.overflow = "hidden";
   }
 
   function off() {
     document.getElementById("overlay").style.display = "none";
     document.getElementById("toto").style.display = "none"
     document.getElementById("abel").style.display = "block"
-    document.getElementById("bobyjd").style.overflow = "auto";
+    document.getElementById("body-overflow").style.overflow = "auto";
   }
 </script>
