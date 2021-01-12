@@ -3,12 +3,10 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      container : {
-        xl: '1220px',
-      },
       colors: {
-        'body-grey': '#f3f3f3',
-        'grey': '#b3b3b3;',
+        'body-gray': '#f3f3f3',
+        'gray': '#b3b3b3',
+        'gray-light': '#DCDCDC'
       }
     },
   },

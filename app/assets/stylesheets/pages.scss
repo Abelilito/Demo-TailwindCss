@@ -15,9 +15,27 @@
   font-size: 8px;
 }
 
-footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+.menu-mobile {
+  height: 100vh;
+  margin-top: 1px;
+  width: 65%;
+  float: right;
 }
+
+.board-row-fluid {
+  background-image: asset-url("homepage.jpg");
+  height: 35rem;
+  @media (max-width: 640px) {
+    height: 13rem;
+  }
+}
+
+.panel-post {
+  margin-right: 38rem;
+}
+
+.ul-li-inside {
+  list-style: inside;
+}
+
+
